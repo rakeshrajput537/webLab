@@ -1,1 +1,0 @@
-Attendence management system

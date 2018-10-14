@@ -1,6 +1,6 @@
 <?php
-  include_once('includes/header.php');
-  include_once('nav.php');
+  include_once('../includes/header.php');
+  include_once('../nav/index.php');
 ?>
 <body>
   <h2 style="text-align:center">About Us</h2>
@@ -60,5 +60,5 @@
   </div>
 
 <?php 
-    include_once('includes/footer.php');
+    include_once('../includes/footer.php');
 ?>

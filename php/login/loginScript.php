@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include_once('includes/db.php');
+    include_once('../includes/db.php');
     if (isset($_POST['s_submit'])){
         $uid = $_POST['s_uid'];
         $pwd = $_POST['s_pwd'];

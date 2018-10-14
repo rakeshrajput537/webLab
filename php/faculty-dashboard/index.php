@@ -4,11 +4,11 @@
         $uid = $_SESSION['uid'];
     }
     else{
-        $newURL = "index.php";
+        $newURL = "../login/index.php";
         header('Location: '.$newURL);
     }
-    include_once('includes/header.php'); 
-    include_once('nav.php');
+    include_once('../includes/header.php'); 
+    include_once('../nav/index.php');
 ?>
 <body >
     <div class="container">
@@ -168,5 +168,5 @@
     
 <?php
 
-    include_once('includes/footer.php');
+    include_once('../includes/footer.php');
 ?>

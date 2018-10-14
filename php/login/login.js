@@ -8,14 +8,14 @@ $(document).ready(function(){
       e.preventDefault();
       $.ajax({
         type: 'post',
-        url: 'login.php',
+        url: 'loginScript.php',
         data: $('#s_form').serialize(),
         success: function (response) {
           if(response == "STUDENT NOT REGISTERD"){
             $("#s_error").show();
           }
           else{
-            var url = "dashboardStu.php";
+            var url = "../student-dashboard/index.php";
             $(location).attr('href',url);
           }
         }
@@ -28,14 +28,14 @@ $(document).ready(function(){
       e.preventDefault();
       $.ajax({
         type: 'post',
-        url: 'login.php',
+        url: 'loginScript.php',
         data: $('#t_form').serialize(),
         success: function (response) {
           if(response == "FACULTY NOT REGISTERD"){
             $("#t_error").show();
           }
           else{
-            var url = "dashboardFac.php";
+            var url = "../faculty-dashboard/index.php";
             $(location).attr('href',url);
           }
         }
