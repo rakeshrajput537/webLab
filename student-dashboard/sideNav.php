@@ -1,16 +1,3 @@
-<?php 
-    session_start();
-    if(isset($_SESSION['type'])){
-        $uid = $_SESSION['uid'];
-    }
-    else{
-        $newURL = "index.php";
-        header('Location: '.$newURL);
-    }
-    include_once('includes/header.php'); 
-    include_once('nav.php');
-?>
-<body >
     <div class="container">
         <div class="row">
             <div class="col-sm-3 col-md-3">
@@ -157,16 +144,8 @@
             </div>
             <div class="col-sm-9 col-md-9">
                 <div class="well">
-                    <?php
-                        echo $_SESSION['type']." ".$uid;
-                        ?>
+                    
                 </div>
             </div>
         </div>
     </div>
-
-    
-<?php
-
-    include_once('includes/footer.php');
-?>

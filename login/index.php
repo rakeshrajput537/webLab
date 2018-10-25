@@ -1,17 +1,23 @@
 <?php 
-    session_start();
+    include_once('../includes/header.php'); 
     if($_SESSION["type"]=="student"){
-        $newURL = "dashboardStu.php";
+        $newURL = "../student-dashboard/index.php";
         header('Location: '.$newURL);
     }
     if($_SESSION["type"]=="faculty"){
-        $newURL = "dashboardFac.php";
+        $newURL = "../faculty-dashboard/index.php";
         header('Location: '.$newURL);
     }
-    include_once('includes/header.php'); 
-    include_once('nav.php');
+    // include_once('../includes/header.php'); 
 ?>
-<body class="index-content">
+    
+    <script type="text/javascript" src="login.js"></script>
+
+<?php
+
+    include_once('../nav/index.php');
+?>
+<body class="login-content">
     <div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form-1">
@@ -25,7 +31,7 @@
                     </div>
                     <input type="hidden" name="s_submit" value="student">
                     <div id="s_error" class="error">
-                        <p><img src="includes/error.png">   Incorrect Enrollment number / Password</p>
+                        <p><img src="images/error.png">   Incorrect Enrollment number / Password</p>
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btnSubmit" value="Login" />
@@ -48,7 +54,7 @@
                     </div>
                     <input type="hidden" name="t_submit" value="faculty">
                     <div id="t_error" class="error">
-                        <p><img src="includes/error.png">   Incorrect Faculty ID / Password</p>
+                        <p><img src="images/error.png">   Incorrect Faculty ID / Password</p>
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btnSubmit" value="Login" />
@@ -63,5 +69,5 @@
         </div>
     </div>
 <?php 
-    include_once('includes/footer.php');
+    include_once('../includes/footer.php');
 ?>
